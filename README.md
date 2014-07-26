@@ -2,20 +2,20 @@
 
 > cann table generator from html table linked.
 
-### Requires
+##### Requires
 
 PHP server + skills
 cUrl extension
 access to a website with a well-formed html table you wish to process (bbc, sky, espn, thechels.co.uk etc).
 
-### Example
+##### Example
 
-www.thechels.co.uk/cann
+http://www.thechels.co.uk/premier-league-cann-table/
 
-### Contributions
+##### Contributions
 
 Contributions are welcome, submit a pull request. 
 
-### Support
+##### Support
 
 Raise an issue.
