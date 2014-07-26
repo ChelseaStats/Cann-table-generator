@@ -7,13 +7,12 @@
  *  optional: output has TableSorter class which is a jQuery plugin to allow sorting & multi-sorting of columns, and zebra theme.
  *
  *  If you don't know what a Cann table is, you should probably move on.
+ *
+ * configuration: set the url here and then some marks on the page to reduce processing the 
+ * entire thing see inline code (start and finish)
  */
 
-// configuration: set the url here and then some marks on the page to reduce processing the entire thing.
-
 $url    =   'the data source';
-$start  =   strpos($content,"some marker in the html");
-$end    =   strpos($content,"some other marker in the html");
 
 /**
  * You'll also need to massage the data through the process  by deciding which columns of the data exist
@@ -36,6 +35,8 @@ $end    =   strpos($content,"some other marker in the html");
             $content=str_replace($newlines, "", html_entity_decode($raw));
             /******************************************************************************/
             /*table-stats*/
+            $start  =   strpos($content,"some marker in the html");
+            $end    =   strpos($content,"some other marker in the html");
 
             $table = substr($content,$start,$end-$start);
             preg_match_all("|<tr(.*)</tr>|U",$table,$rows);
